@@ -3,7 +3,7 @@ import { useState } from "react";
 import './App.css';
 
 import Card from "./components/Card";
-import SearchBar  from "./components/SearchBar";
+import SearchBar from "./components/SearchBar";
 
 const listCars = [
   {
@@ -51,7 +51,8 @@ const App = () => {
   return (
     <>
       <h1>Anúncios Recentes</h1>
-      <div className='cards'>Lista de Carros...
+      <SearchBar handleSearch={handleSearch} />
+      <div className='cards'>
         {listCars.map((car) => (
           <Card key={car.id} car={car} />
         ))}
